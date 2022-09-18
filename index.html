@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ------------------------------------ Alarm_Favicon ---------- ---------------------------- -->
+    <link rel="apple-touch-icon" sizes="180x180" href="alarm_Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="alarm_Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="alarm_Favicon/favicon-16x16.png">
+    <link rel="manifest" href="alarm_Favicon/site.webmanifest">
+    <link rel="mask-icon" href="alarm_Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+<!----------------- ------                Bootstrap   CDN Link              ------------------------ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!--------------------------------------- CSS File Link    --------------------------------------->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <div id="alarm">
+        <!----------------------------------------- Heading Alarm Clock ------------  --------------->
+        <h1 class="text-center mt-3 text-info"><i class="bi bi-alarm me-2 text-info"></i>Alarm Clock</h1>
+
+        <div class="container-fluid ">
+            <div class="row text-center mb-3">
+                <div class="col-md-12">
+                    <!--------------------------- CurrentTime Show   --------------------------------->
+                    <h2 class="currentTime"> <span class="bg-info">00:00:00</span></h2>
+                </div>
+            </div>
+            <div class="row selectAlarm ">
+                <div class="row justify-content-evenly ">
+                    <!-------------------------------Select Hours Options----------------------------->
+                    <div class="col-md-3 col-sm-3 mb-3 noSelect">
+                        <label for="Hours" ">Hours</label>
+                         <select class=" form-select" id="Hours">
+                            <option value="Hours">Hours</option>
+                            </select>
+                    </div>
+                    <!-- ----------------------------Select Minutes Options ---------------------- -->
+
+                    <div class="col-md-3 col-sm-3 mb-3 ">
+                        <label for="Minutes">Minutes</label>
+                        <select class="form-select" id="Minutes">
+                            <option value="Minutes" selected disabled>Minutes</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row justify-content-evenly ">
+                    <!---------------------- Select Seconds Options   ---------------------------- -->
+                    <div class="col-md-3 col-sm-3 mb-3 ">
+                        <label for="Minutes">Seconds</label>
+                        <select class="form-select" id="Seconds">
+                            <option value="Seconds">Seconds</option>
+                        </select>
+                    </div>
+
+                    <!----------------- ----  --Select AM/PM Option------------------------------- -->
+                    <div class="col-md-3 col-sm-3 mb-3 noSelect">
+                        <label for="AM/PM">AM/PM</label>
+                        <select class="form-select" id="AM/PM">
+                            <option value="AM/PM">AM/PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-evenly">
+                <!---------------------------------      Set Alarm Button   -------------------------->
+                <div class="col-md-2 text-center mt-4 ">
+                    <button class="btn  btn-info alarm-btn text-white "><i class="bi bi-bell me-2 text"></i> Set Alarm</button>
+                </div>
+
+                <!-------------------------------------- Alarm_Gif ----------------------------------->
+                <div class="col-md-2 text-center mt-4 ">
+                   <img src="./alarm_Gif/icons8-bell.gif" class="alarm_Gif text-info" alt="alarm_Gif">
+                </div>
+
+                <!----------------------------- Stop Alarm Button ---------------------------------- -->
+                <div class="col-md-2 text-center mt-4">
+                    <button class="btn  btn-info " id="stopAlarm" onclick="stopAlarm()"> Stop the Alarm</button>
+                </div>
+            </div>
+            <!------------------------------------  Alram List Section  -------------------------------->
+            <div class="row mt-4 justify-content-evenly mb-5">
+                <div class=" col-sm-6 col-md-6 listBox  shadow  rounded">
+                    <div class="justify-content-evenly">
+                        <h3 class="text-info text-center" id="alarm-h3"></h3>
+                    </div>
+                    <div class="alarmList">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------------------     JavaScript File Link     ------------------------ -->
+
+    <Script src="./script.js"></Script>
+   
+</body>
+</html>

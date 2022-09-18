@@ -1,0 +1,20 @@
+
+img, svg {
+    vertical-align: middle;
+    height: 50px;
+    visibility: hidden;
+    color: blueviolet;
+}
+#stopAlarm{
+    visibility: hidden;
+    border: none;
+
+}
+#stopAlarm:hover{
+    background-color: rgb(249, 104, 104);
+    color: white;
+}
+ 
+h5{
+    color: brown;
+}
